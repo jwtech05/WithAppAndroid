@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterInfo">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="간편입력"
+        android:textColor="@color/teal_200"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nickNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="닉네임"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <EditText
+        android:id="@+id/editTextNickName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="textPersonName"
+        app:layout_constraintTop_toBottomOf="@id/nickNameText"
+        android:hint="이름 또는 닉네임"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/nickNameText"
+        tools:layout_editor_absoluteY="150dp" />
+
+    <TextView
+        android:id="@+id/birthText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="생년월일"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/nickNameText"
+        app:layout_constraintTop_toBottomOf="@id/editTextNickName" />
+
+    <TextView
+        android:id="@+id/genderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="성별"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/editTextNickName"
+        app:layout_constraintTop_toBottomOf="@id/birthPicker" />
+
+    <Button
+        android:id="@+id/genderMan"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="10dp"
+        android:text="남"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toStartOf="@id/genderWoman"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderText" />
+
+    <Button
+        android:id="@+id/genderWoman"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintStart_toEndOf="@id/genderMan"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/genderMan"
+        app:layout_constraintBottom_toBottomOf="@id/genderMan"
+        android:text="여"
+        android:backgroundTint="#777A7A"
+        tools:layout_editor_absoluteX="228dp"
+        tools:layout_editor_absoluteY="476dp" />
+
+    <TextView
+        android:id="@+id/countryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="나라"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/nickNameText"
+        app:layout_constraintTop_toBottomOf="@id/genderMan" />
+
+    <TextView
+        android:id="@+id/editTextCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="여기를 클릭해주세요."
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/countryText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/nickNameText"
+        tools:layout_editor_absoluteY="538dp" />
+
+    <Button
+        android:id="@+id/continueInfoButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="@color/teal_200"
+        android:text="계속하기"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/birthPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2023/05/01"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="@id/editTextNickName"
+        app:layout_constraintStart_toStartOf="@id/editTextNickName"
+        app:layout_constraintTop_toBottomOf="@id/birthText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

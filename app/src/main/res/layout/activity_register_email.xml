@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterEmail">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="회원가입"
+        android:textColor="@color/teal_200"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/emailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="이메일"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:id="@+id/editTextEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:hint="이메일을 입력하세요."
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/validationButton"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/emailText" />
+
+    <Button
+        android:id="@+id/validationButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/teal_200"
+        android:paddingRight="10dp"
+        android:text="인증하기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@id/emailText" />
+
+    <TextView
+        android:id="@+id/noticeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12dp"
+        android:textColor="@color/teal_200"
+        android:visibility="gone"
+        android:text="이메일로 인증번호가 전송되었습니다.\n5분 안에 인증번호를 입력해주세요."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+
+    <EditText
+        android:id="@+id/editTextValidation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="14"
+        android:hint="인증번호를 입력해주세요."
+        android:visibility="gone"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmail"
+        app:layout_constraintTop_toBottomOf="@+id/noticeText" />
+
+    <Button
+        android:id="@+id/confirmButton"
+        android:layout_width="59dp"
+        android:layout_height="34dp"
+        android:backgroundTint="@color/teal_200"
+        android:visibility="gone"
+        android:paddingRight="10dp"
+        android:text="확인"
+        android:textSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/editTextValidation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/editTextValidation"
+        app:layout_constraintTop_toTopOf="@id/editTextValidation" />
+
+    <TextView
+        android:id="@+id/passwordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="비밀번호"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/emailText"
+        app:layout_constraintTop_toBottomOf="@id/cNoticeText" />
+
+    <EditText
+        android:id="@+id/editTextPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:hint="비밀번호를 입력하세요."
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintTop_toBottomOf="@id/passwordText"
+        app:layout_constraintStart_toStartOf="@id/editTextEmail"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <TextView
+        android:id="@+id/noticePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="[비밀번호 설정방법] \n 영문,숫자,특수문자 포함 8~16자"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/editTextPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/passwordText"
+        tools:layout_editor_absoluteY="247dp" />
+
+    <TextView
+        android:id="@+id/passwordConfirmText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="비밀번호 확인"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/emailText"
+        app:layout_constraintTop_toBottomOf="@id/noticePassword" />
+
+    <EditText
+        android:id="@+id/editTextPasswordConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="12"
+        android:inputType="textPassword"
+        android:hint="다시한번 입력하세요"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordConfirmText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/emailText"
+        tools:layout_editor_absoluteY="317dp" />
+
+    <Button
+        android:id="@+id/continueButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="계속하기"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/cNoticeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:text=""
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextValidation"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/emailText"
+        tools:layout_editor_absoluteY="141dp" />
+
+    <TextView
+        android:id="@+id/confirmPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/emailText"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPasswordConfirm" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

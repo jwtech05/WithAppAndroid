@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterPhone">
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="번호인증"
+        android:textColor="@color/teal_200"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextPhoneNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:ems="12"
+        android:inputType="textPersonName"
+        android:hint="전화번호를 입력해주세요(-제외)"
+        app:layout_constraintEnd_toStartOf="@id/sendButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <Button
+        android:id="@+id/sendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/editTextPhoneNum"
+        app:layout_constraintBottom_toBottomOf="@id/editTextPhoneNum"
+        app:layout_constraintStart_toEndOf="@id/editTextPhoneNum"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/teal_200"
+        android:text="인증하기"
+        tools:layout_editor_absoluteX="295dp"
+        tools:layout_editor_absoluteY="119dp" />
+
+    <EditText
+        android:id="@+id/editTextNumVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:ems="12"
+        android:hint="인증번호를 입력해주세요."
+        android:inputType="textPersonName"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/editTextPhoneNum"
+        app:layout_constraintTop_toBottomOf="@id/editTextPhoneNum" />
+
+    <Button
+        android:id="@+id/numVerButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="확인하기"
+        android:visibility="gone"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toStartOf="@id/resendButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumVer" />
+
+    <Button
+        android:id="@+id/resendButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/numVerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/numVerButton"
+        android:backgroundTint="@color/teal_200"
+        android:text="재전송"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="213dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/editTextNumVer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/editTextNumVer"
+        app:layout_constraintBottom_toBottomOf="@id/editTextNumVer"
+        android:text="3:00"
+        android:visibility="gone"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="314dp"
+        tools:layout_editor_absoluteY="210dp" />
+
+    <TextView
+        android:id="@+id/warningText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNumVer"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/editTextNumVer"
+        tools:layout_editor_absoluteY="240dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
