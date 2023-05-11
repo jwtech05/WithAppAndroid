@@ -1,9 +1,14 @@
 package com.example.withapp.RETROFIT;
 
 import com.example.withapp.POJO.CallbackData;
+import com.example.withapp.POJO.ProfileImg;
+import com.example.withapp.POJO.ProfileData;
+import com.example.withapp.POJO.SearchRecyclerData;
 import com.example.withapp.POJO.SmsRequest;
 import com.example.withapp.POJO.SmsResponse;
 import com.example.withapp.POJO.UserInfo;
+
+import java.util.List;
 
 import okhttp3.MultipartBody;
 import okhttp3.RequestBody;
@@ -78,13 +83,64 @@ public interface RetrofitInterface {
     Call<String> checkSignOrNot(
             @Field("email") String email
     );
+    //사진 업로드 API
     @Multipart
     @POST("upload_image.php")
     Call<String> uploadImage(@Part MultipartBody.Part image, @Part("userId") RequestBody userId);
 
+    //멤버정보 콜백 API
     @FormUrlEncoded
     @POST("callback.php")
     Call<String> memberInfo(
             @Field("memberId") String memberId
+    );
+
+    @FormUrlEncoded
+    @POST("callback.php")
+    Call<ProfileData> memberProfileInfo(
+            @Field("memberId") String memberId
+    );
+
+    @FormUrlEncoded
+    @POST("callbackImage.php")
+    Call<ProfileImg> memberProfileImg(
+            @Field("memberId") String memberId
+    );
+
+    @FormUrlEncoded
+    @POST("changeProfileInfo.php")
+    Call<String> changeProfileInfo(
+            @Field("memberId") String memberId,
+            @Field("cNickName") String nickName,
+            @Field("cAge") String age,
+            @Field("cGender") String gender,
+            @Field("cCountry") String country,
+            @Field("cComment") String comment
+    );
+    //위도,경도 저장
+    @FormUrlEncoded
+    @POST("locationInfo.php")
+    Call<String> locationInfo(
+            @Field("memberId") String memberId,
+            @Field("latitude") double latitude,
+            @Field("longitude") double longitude
+    );
+    //위치정보제공 on/off
+    @FormUrlEncoded
+    @POST("locationOnOff.php")
+    Call<String> locationOnOff(
+            @Field("memberId") String memberId,
+            @Field("onOff") Boolean onOff
+    );
+    //반경에 포함되는 거리의 정보가져오기
+    @FormUrlEncoded
+    @POST("searchRecyclerInfo.php")
+    Call<List<SearchRecyclerData>> searchRecyclerInfo(
+            @Field("memberId") String memberId,
+            @Field("distance") int distance,
+            @Field("age") int age,
+            @Field("gender") String gender,
+            @Field("latitude") double latitude,
+            @Field("longitude") double longitude
     );
 }

@@ -128,17 +128,17 @@ public class RegisterInfo extends AppCompatActivity {
         final NumberPicker yearPicker = new NumberPicker(this);
         yearPicker.setMinValue(1930);
         yearPicker.setMaxValue(2023);
-        yearPicker.setValue(year);
+        yearPicker.setValue(2023);
 
         final NumberPicker monthPicker = new NumberPicker(this);
         monthPicker.setMinValue(1);
         monthPicker.setMaxValue(12);
-        monthPicker.setValue(month);
+        monthPicker.setValue(5);
 
         final NumberPicker dayPicker = new NumberPicker(this);
         dayPicker.setMinValue(1);
         dayPicker.setMaxValue(31);
-        dayPicker.setValue(day);
+        dayPicker.setValue(4);
 
         // Dialog 빌더 생성 및 NumberPicker 추가
         AlertDialog.Builder builder = new AlertDialog.Builder(this);

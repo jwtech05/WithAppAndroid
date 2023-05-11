@@ -158,16 +158,6 @@
         app:layout_constraintStart_toStartOf="@id/editTextId"
         app:layout_constraintTop_toBottomOf="@id/editTextId" />
 
-    <TextView
-        android:id="@+id/loginViewr"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        android:text=""
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="MissingConstraints" />
 
     <CheckBox
         android:id="@+id/rememberId"

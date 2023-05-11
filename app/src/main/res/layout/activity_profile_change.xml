@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileChange">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/changeImageView"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/selfIntroText"
+        android:layout_width="217dp"
+        android:layout_height="135dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:background="@drawable/edit_shape"
+        app:layout_constraintStart_toEndOf="@id/changeImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/changeImageView"
+        android:text=""
+        android:gravity="top"
+        android:maxLength="50"
+        tools:layout_editor_absoluteX="182dp"
+        tools:layout_editor_absoluteY="27dp" />
+
+    <TextView
+        android:id="@+id/cNickNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="닉네임"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/changeImageView"
+        app:layout_constraintTop_toBottomOf="@id/changeImageView" />
+
+    <EditText
+        android:id="@+id/cNickNameEdit"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_shape"
+        android:ems="13"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@id/selfIntroText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/cNickNameText"
+        app:layout_constraintTop_toBottomOf="@id/cNickNameText" />
+
+    <TextView
+        android:id="@+id/cAgeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="나이"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/changeImageView"
+        app:layout_constraintTop_toBottomOf="@id/cNickNameEdit" />
+
+    <EditText
+        android:id="@+id/cAgeEdit"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_shape"
+        android:ems="13"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@id/selfIntroText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/cAgeText"
+        app:layout_constraintTop_toBottomOf="@id/cAgeText" />
+
+    <TextView
+        android:id="@+id/cGenderText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="성별"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/changeImageView"
+        app:layout_constraintTop_toBottomOf="@id/cAgeEdit" />
+
+    <EditText
+        android:id="@+id/cGenderEdit"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_shape"
+        android:ems="13"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@id/selfIntroText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/cGenderText"
+        app:layout_constraintTop_toBottomOf="@id/cGenderText" />
+
+    <TextView
+        android:id="@+id/cCountryText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="나라"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/changeImageView"
+        app:layout_constraintTop_toBottomOf="@id/cGenderEdit" />
+
+    <EditText
+        android:id="@+id/cCountryEdit"
+        android:layout_width="360dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_shape"
+        android:ems="13"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@id/selfIntroText"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/cCountryText"
+        app:layout_constraintTop_toBottomOf="@id/cCountryText" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cCountryEdit"
+        android:text="정보 수정"
+        android:backgroundTint="@color/teal_200"
+        tools:layout_editor_absoluteX="159dp"
+        tools:layout_editor_absoluteY="639dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -136,7 +136,7 @@ public class RegisterPhoto extends AppCompatActivity {
             public void onResponse(Call<String> call, Response<String> response) {
                 String result = response.body();
                 Log.d("결과", result);
-                uploadImage(imageSpace, "testImage");
+                uploadImage(imageSpace, intentEmailId);
                 noticePhoto.setText("회원가입이 완료되었습니다.");
             }
             @Override

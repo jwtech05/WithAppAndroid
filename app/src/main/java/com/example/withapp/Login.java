@@ -43,8 +43,7 @@ import retrofit2.Response;
 public class Login extends AppCompatActivity {
     private Context context;
     private NidOAuthLoginButton buttonOAuthLoginImg;
-    private NaverIdLoginSDK naverIdLoginSDK;
-    private TextView loginViewr;
+    public static NaverIdLoginSDK naverIdLoginSDK;
     private EditText userId;
     private EditText userPw;
     private String email;
@@ -75,8 +74,6 @@ public class Login extends AppCompatActivity {
         loginWarning = (TextView) findViewById(R.id.loginWarning);
         //회원가입 텍스트
         register = (TextView) findViewById(R.id.register);
-        //로그인 여부 확인
-        loginViewr = (TextView) findViewById(R.id.loginViewr);
         //앱 로그인 버튼
         loginButton = (Button) findViewById(R.id.loginButton);
         //네이버 전용 로그인 버튼
@@ -86,7 +83,7 @@ public class Login extends AppCompatActivity {
         //자동로그인 버튼
         autoLogin = (CheckBox) findViewById(R.id.autoLogin);
         if(getAutoLoginState()){
-            Intent intent = new Intent(context, test.class);
+            Intent intent = new Intent(context, BottomNavi.class);
             startActivity(intent);
         }
         String savedEmail = getEmail();
@@ -230,7 +227,7 @@ public class Login extends AppCompatActivity {
         if(autoLogin.isChecked()){
             saveAutoLoginState(true);
         }
-        Intent intent = new Intent(context, test.class);
+        Intent intent = new Intent(context, BottomNavi.class);
         startActivity(intent);
     }
     private ActivityResultLauncher<Intent> launcher = registerForActivityResult(
@@ -251,7 +248,7 @@ public class Login extends AppCompatActivity {
                                         naverEmail = userInfo.getResponse().getEmail();
                                         naverToken = naverIdLoginSDK.getAccessToken();
                                         new CheckEmailTask().execute(naverEmail);
-                                        loginViewr.setText(userInfo.getResponse().getEmail()+"님 로그인 되셨습니다.");
+
                                     }else {
 
                                     }
@@ -344,7 +341,6 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 naverIdLoginSDK.logout();
-                loginViewr.setText("로그아웃 되셨습니다.");
                 Toast.makeText(context,"로그아웃",Toast.LENGTH_SHORT).show();
             }
         });
