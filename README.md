@@ -1,3 +1,7 @@
+## 기획서 : https://docs.google.com/presentation/d/1z4jr0Co8V3uUAD6aiu-QdRDXGyof_AC2lqNwQbT9xn8/edit#slide=id.g2001d676a39_0_0
+## 기능명세서 : https://docs.google.com/spreadsheets/d/1GUEy9sU39I8Ufynq-cEf8gLmy51jYimld8wSN3M9sEM/edit#gid=0
+---
+
 ### 🔸**앱 설명**
 
 - **여행을 같이 할 사람을 찾을 수 있는 앱.**
